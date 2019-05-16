@@ -22,5 +22,4 @@ class Cat
     new_mood = @mood
     @mood
   end
-
 end
