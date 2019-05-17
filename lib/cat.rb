@@ -22,22 +22,4 @@ require 'pry'
       @mood
     end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   end
