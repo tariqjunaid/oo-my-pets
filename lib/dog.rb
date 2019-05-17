@@ -1,24 +1,39 @@
 require 'pry'
 
-class Dog
-  attr_accessor :owner, :mood, :new_mood, :all_dogs
-  attr_reader :name
+  class Dog
 
-  @@all_dogs = []
+    attr_reader :name
+    attr_accessor :mood, :owner
 
-  def initialize(name, owner)
-    @name = name
-    @owner = owner
-    @@all_dogs << self
-    @mood = "nervous"
+    @@all = []
+
+    def initialize(name, owner)
+      @name = name
+      @owner = owner
+      @mood = "nervous"
+      @@all << self
+    end
+
+    def self.all
+      @@all
+    end
+
+    def mood
+      @mood
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   end
-
-  def self.all
-    @@all_dogs
-  end
-
-  def self.mood(new_mood)
-    new_mood = @mood
-    @mood
-  end
-end

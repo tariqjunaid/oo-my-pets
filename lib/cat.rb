@@ -1,25 +1,43 @@
 require 'pry'
 
-class Cat
-  attr_accessor :new_mood, :mood, :all_cats, :owner
-  attr_reader :name
+  class Cat
 
-  @@all_cats = []
+    attr_reader :name
+    attr_accessor :mood, :owner
 
-  def initialize(name, owner)
-    @name = name
-    @owner = owner
-    @@all_cats << self
-    @mood = "nervous"
+    @@all = []
+
+    def initialize(name, owner)
+      @name = name
+      @owner = owner
+      @mood = "nervous"
+      @@all << self
+    end
+
+    def self.all
+      @@all
+    end
+
+    def mood
+      @mood
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   end
-
-  def self.all
-    #binding.pry
-    @@all_cats
-  end
-
-  def self.mood(new_mood)
-    new_mood = @mood
-    @mood
-  end
-end
